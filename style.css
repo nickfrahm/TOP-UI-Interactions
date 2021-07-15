@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: tomato;
+    padding: 0px 50px;
+}
+
+.links {
+    display: flex;
+}
+
+.link {
+    padding: 20px 20px;
+}
+
+.link:hover {
+    background-color: rgb(255, 135, 113);
+}
+
+.dropdown {
+    display: none;
+}
