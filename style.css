@@ -11,7 +11,8 @@
 }
 
 .link {
-    padding: 20px 20px;
+    padding: 20px;
+    position: relative;
 }
 
 .link:hover {
@@ -19,5 +20,22 @@
 }
 
 .dropdown {
+    background-color: blue;
     display: none;
+    position: absolute;
+    top: 56px;
+}
+
+.mobileMenu {
+    margin: 90px 0;
+}
+
+.mobileMenu h1 {
+    padding: 20px 0px;
+}
+
+.mobile {
+    position: absolute;
+    top: -100vh;
+    height: 50vh;
 }

@@ -8,35 +8,50 @@
     <title>Common JS functionality</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
 <body>
-    <nav class="navbar">
-        <h1 class="siteName">JS-UI-Stuff</h1>
-        <ul class="links">
-            <li class="link">
-                <a id="contact" href="#">contact</a>
-                <ul class="dropdown">
-                    <li class="droplink">one</li>
-                    <li class="droplink">two</li>
-                </ul>
-            </li>
-            <li class="link">
-                <a id="locations" href="#">locations</a>
-                <ul class="dropdown">
-                    <li class="droplink">one</li>
-                    <li class="droplink">two</li>
-                </ul>
-            </li>
-            <li class="link">
-                <a id="people" href="#">people</a>
-                <ul class="dropdown">
-                    <li class="droplink">one</li>
-                    <li class="droplink">two</li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <div class="wrapper">
+        <nav class="navbar">
+            <h1 class="siteName">JS-UI-Stuff</h1>
+            <ul class="links">
+                <li class="link">
+                    <a id="contact" href="#">contact</a>
+                    <ul class="dropdown">
+                        <li class="droplink">one</li>
+                        <li class="droplink">two</li>
+                    </ul>
+                </li>
+                <li class="link">
+                    <a id="locations" href="#">locations</a>
+                    <ul class="dropdown">
+                        <li class="droplink">one</li>
+                        <li class="droplink">two</li>
+                    </ul>
+                </li>
+                <li class="link">
+                    <a id="people" href="#">people</a>
+                    <ul class="dropdown">
+                        <li class="droplink">one</li>
+                        <li class="droplink">two</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="mobileMenu navbar" id="mobile">
+            <h1 class="siteName">JS-UI-Stuff</h1>
+            <i class="fas fa-bars menu-icon"></i>
+        </section>
+        <section class="mobile">
+            <ul class="mobileLinks">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
+    </div>
     <script src="index.js"></script>
 </body>
 
