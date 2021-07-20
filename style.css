@@ -35,7 +35,62 @@
 }
 
 .mobile {
+    background-color: blueviolet;
     position: absolute;
     top: -100vh;
     height: 50vh;
+}
+
+.mobileShowing {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.carousel {
+    width: 100%;
+    text-align: center;
+}
+
+.img-container {
+    width: 50%;
+    margin: auto;
+    background-color: gray;
+    text-align: center;
+}
+
+.box {
+    display: none;
+    height: 80px;
+    width: 80px;
+    color: coral;
+    margin: 5px 0;
+}
+
+.box1 {
+    background-color: blueviolet;
+}
+
+.box2 {
+    background-color: chartreuse;
+}
+
+.box3 {
+    background-color: darkblue;
+}
+
+.arrow {
+    display: inline-block;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active {
+    display: inline-block;
 }
