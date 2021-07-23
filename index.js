@@ -26,7 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document
     .querySelector('.arrow-right')
     .addEventListener('click', advanceIndex);
+
+  document.querySelector('.arrow-left').addEventListener('click', reduceIndex);
 });
+
 /* Dropdown menu on hover */
 function showDropDownMenu(link) {
   if (link.target.classList.contains('link')) {
@@ -55,10 +58,13 @@ function getCarouselArray() {
 function advanceIndex() {
   const arr = getCarouselArray();
   let advance = false;
-  arr.forEach((box) => {
+  arr.forEach((box, index) => {
     if (box.classList.contains('active')) {
       box.classList.toggle('active');
       advance = true;
+      if (index === arr.length - 1) {
+        arr[0].classList.toggle('active');
+      }
     } else {
       if (advance) {
         box.classList.toggle('active');
@@ -66,5 +72,24 @@ function advanceIndex() {
       }
     }
   });
+}
+
+function reduceIndex() {
+  const arr = getCarouselArray();
+  let reduce = false;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i].classList.contains('active')) {
+      arr[i].classList.toggle('active');
+      reduce = true;
+      if (i === 0) {
+        arr[arr.length - 1].classList.toggle('active');
+      }
+    } else {
+      if (reduce) {
+        arr[i].classList.toggle('active');
+        advance = false;
+      }
+    }
+  }
 }
 /* END "img" carousel*/
