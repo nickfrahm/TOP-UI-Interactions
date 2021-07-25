@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     .addEventListener('click', advanceIndex);
 
   document.querySelector('.arrow-left').addEventListener('click', reduceIndex);
+
+  document.querySelectorAll('.circle').forEach((circle) =>
+    circle.addEventListener('click', () => {
+      setActiveImg(circle.id);
+    })
+  );
 });
 
 /* Dropdown menu on hover */
@@ -76,20 +82,31 @@ function advanceIndex() {
 
 function reduceIndex() {
   const arr = getCarouselArray();
-  let reduce = false;
-  for (let i = arr.length - 1; i >= 0; i--) {
-    if (arr[i].classList.contains('active')) {
+  let set = false;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].classList.contains('active') && i === 0) {
       arr[i].classList.toggle('active');
-      reduce = true;
-      if (i === 0) {
-        arr[arr.length - 1].classList.toggle('active');
-      }
-    } else {
-      if (reduce) {
-        arr[i].classList.toggle('active');
-        advance = false;
-      }
+      arr[arr.length - 1].classList.toggle('active');
+      set = true;
+    } else if (arr[i].classList.contains('active') && !set) {
+      arr[i].classList.toggle('active');
+      arr[i - 1].classList.toggle('active');
     }
   }
+}
+
+function setActiveImg(id) {
+  removeActiveImg();
+  document
+    .querySelector('.img-container')
+    .querySelector(`.box${id}`)
+    .classList.toggle('active');
+}
+
+function removeActiveImg() {
+  document
+    .querySelector('.img-container')
+    .querySelector('.active')
+    .classList.toggle('active');
 }
 /* END "img" carousel*/
